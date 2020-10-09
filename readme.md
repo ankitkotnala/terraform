@@ -35,7 +35,8 @@ module "wan1" {
 
   rsg             = "uks-prd-wan-rsg"
   waname          = "uksprdwan001"
-  hublocations    = var.hublocations
+  hublocations    = ["UK South","UK West"]
+  adress_prefixes = ["10.0.0.0/24","172.0.0.0/24"]
   location        = var.location
   environment     = var.environment
   tag_buildby     = var.buildby
