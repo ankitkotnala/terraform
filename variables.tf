@@ -45,3 +45,8 @@ variable "adress_prefixes" {
     description = "Address prefixes of hubs"
 }
 
+variable "hublocations" {
+    type = list(string)
+    description = "Azure Region for Hubs to be created"
+}
+
