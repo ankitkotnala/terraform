@@ -35,6 +35,8 @@ resource "azurerm_virtual_hub" "vhub" {
   name                 = var.hubnames[count.index]
   resource_group_name  = var.rsg
   address_prefix       = var.adress_prefixes[count.index]
+  location             = var.hublocations[count.index]
+  virtual_wan_id       = azurerm_virtual_wan.vwan.id
   tags = {
 
         BuildBy          =       var.tag_buildby
