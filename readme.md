@@ -16,6 +16,7 @@
 | tag\_buildticket | Ticket Number for the build | `string` | n/a | yes |
 | wanname | Name for the Virtual Wan | `string` | n/a | yes |
 | hubnames | Names for hubs to be created | `list` | `""` | Yes |
+| hublocations | Azure Regions for hubs to be created | `list` | `""` | Yes |
 
 ## Outputs
 
@@ -34,7 +35,7 @@ module "wan1" {
 
   rsg             = "uks-prd-wan-rsg"
   waname          = "uksprdwan001"
-
+  hublocations    = var.hublocations
   location        = var.location
   environment     = var.environment
   tag_buildby     = var.buildby
