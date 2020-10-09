@@ -30,7 +30,7 @@ variable "rsg" {
     description = "Resource Group to create WAN in"
 }
 
-variable "wananme"{
+variable "wanname"{
     type = string
     description = "Name of the virtual wan"
 }
