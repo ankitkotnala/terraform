@@ -34,7 +34,8 @@ module "wan1" {
   source = "github.com/ankitkotnala/terraform.git"
 
   rsg             = "uks-prd-wan-rsg"
-  waname          = "uksprdwan001"
+  wanname          = "uksprdwan001"
+  hubnames         = ["hub1","hub2"]
   hublocations    = ["UK South","UK West"]
   adress_prefixes = ["10.0.0.0/24","172.0.0.0/24"]
   location        = var.location
