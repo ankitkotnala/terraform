@@ -31,7 +31,7 @@ Optional inputs are commented out.
 
 ```hcl
 module "wan1" {
-  source = "github.com/global-azure/terraform-azurerm-wan.git"
+  source = "github.com/ankitkotnala/terraform.git"
 
   rsg             = "uks-prd-wan-rsg"
   waname          = "uksprdwan001"
