@@ -2,7 +2,7 @@
 
 | Name | Version |
 |------|---------|
-| azurerm | >= 2.0 |
+| azurerm | >= 2.2 |
 
 ## Inputs
 
@@ -11,7 +11,6 @@
 | environment | Prod,QA,STG,DEV,etc. | `any` | n/a | yes |
 | location | Azure region for the environment. | `string` | n/a | yes |
 | rsg | Resource Group to Create the WAN in | `string` | n/a | yes |
-| tag\_automation\_exclude | Automation services to exclude. Comma separated list including Monitoring, Passport, and AntiMalware. | `string` | `"None"` | no |
 | tag\_buildby | Name of the builder. | `string` | n/a | yes |
 | tag\_builddate | Date in ISO-8601 format (yyyymmdd). | `string` | n/a | yes |
 | tag\_buildticket | Ticket Number for the build | `string` | n/a | yes |
@@ -41,6 +40,6 @@ module "wan1" {
   tag_buildby     = var.buildby
   tag_buildticket = var.buildticket
   tag_builddate   = var.builddate
-  # tag_automation_exclude = "Passport"
+  
 }
 ```
